@@ -1,0 +1,183 @@
+
+html {
+	box-sizing: border-box;
+	font-size: 10px;
+	background: rgb(252, 209, 153);
+	background: repeating-linear-gradient(rgb(255, 230, 207) ,rgb(255, 230, 207) 50px, rgb(252, 209, 153) 0, rgb(255, 207, 144) 100px); 
+		animation: move-stripe1 7.5s infinite linear
+}
+
+@keyframes move-stripe1 {
+	0% {  background-position-y: -100px;  }
+	100% {  background-position-y: 0px;  }
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Saira Stencil One', cursive;
+}
+
+
+h1 {
+	text-align: center;
+	font-size: 6rem;
+	line-height: 1;
+	margin-bottom: 0;
+}
+
+h2{
+	text-align:center;
+	font-size:3rem;
+}
+
+
+.title{
+	position:absolute;
+	top:20%;
+	left:40%;
+	font-size:8rem;
+}
+
+.mole-page1{
+	margin-top:70px;
+	width:600px;
+	height:600px;
+}
+
+.description{
+	position:absolute;
+	top:40%;
+	left:40%;
+	color:rgba(0, 0, 0, 0.603);
+}
+
+.firstpage-button{
+	text-decoration:none;
+	font-size:30px;
+	background-color:black;
+    opacity:0.6;
+	color:white;
+	border-radius:5%;
+	padding:5px;
+}
+
+/* page2---------------------------------------- */
+header{
+	display:flex;
+	justify-content: center;
+}
+
+
+.board {
+	background-color:white ;
+	opacity:0.7;
+	width:400px;
+	border-radius: 30px;
+	margin:0 auto;
+}
+
+button {
+	margin:2rem;
+	padding: 1em;
+	border-radius: 35%;
+	background-color:rgb(114, 43, 43);
+	color: #fff;
+	font-size: 3em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+button:active,
+:focus {
+	outline: none;
+}
+
+.score {
+	padding: 0 3rem;
+	line-height: 1;
+	border-radius: 1rem;
+}
+
+
+.game {
+	width: 600px;
+	height: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: -30px auto;
+	border-radius:30px;
+	/* background-color:rgb(240, 189, 95); */
+	padding-left:20px;
+	padding-bottom:70px;
+}
+
+
+.hole {
+	flex: 1 0 30%;
+	overflow: hidden;
+	position: relative;
+}
+
+.hole:after {
+
+	background: url(../images/dirt.svg)  no-repeat;
+	background-size: contain;
+
+	content: "";
+	
+	width: 100%;
+	height: 70px;
+	position: absolute;
+
+	
+	bottom: -30px;
+}
+
+.mole {
+	background: url("../images/mole02.png") bottom center no-repeat;
+	background-size: 80%;
+
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 100%;
+	
+	transition: all 0.8s;
+}
+
+
+.hole.up .mole {
+	top: 0;
+}
+
+
+
+
+
+
+/* @media only screen and (max-width: 600px) {
+	body{
+		text-align: center;
+	}
+	.title{
+		position:absolute;
+		top:5%;
+		font-size:40px;
+	}
+	.mole-page1{
+		width:500px;
+		margin-top:150px;
+
+	}
+
+	.description{
+		margin-top:700px;
+		margin-left:100px;
+	}
+
+	.button1{
+		position:absolute;
+		top:800px;
+	}
+  } */
